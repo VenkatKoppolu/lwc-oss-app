@@ -1,15 +1,15 @@
-//import compression from "compression";
-//import helmet from  "helmet";
-import express from "express";
-//import cors from "cors";
-//import path from "path";
+import * as compression from "compression";
+import * as helmet from  "helmet";
+import * as express from "express";
+import * as cors from "cors";
+import * as path from "path";
 import {sequelize} from "./database/connection";
 
 
 const app = express();
-//app.use(helmet());
-//app.use(compression());
-//app.use(cors());
+app.use(helmet());
+app.use(compression());
+app.use(cors());
 app.use(express.json());
 
 const HOST = process.env.HOST || 'localhost';
@@ -36,7 +36,7 @@ const server =app.listen(PORT, () =>{
 /**
  * Webpack HMR Activation
  */
-
+/*
 type ModuleId = string | number;
 
 interface WebpackHotModule {
@@ -58,4 +58,4 @@ if (module.hot) {
   module.hot.accept();
   module.hot.dispose(() => server.close());
 }
-
+*/

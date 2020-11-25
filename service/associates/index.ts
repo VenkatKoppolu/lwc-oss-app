@@ -1,4 +1,4 @@
-import express from 'express';
+import * as express from 'express';
 import {Associate} from "./../database/associate.model"
 export const router = express.Router();
 
